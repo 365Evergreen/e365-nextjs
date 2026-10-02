@@ -4,7 +4,7 @@ on:
   # Triggers a build when code is pushed to the main branch
   push:
     branches:
-      - main
+      - master
   
   # Triggers a build when a Pull Request is opened or modified against the main branch
   pull_request:
