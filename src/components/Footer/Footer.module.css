@@ -1,0 +1,12 @@
+.footer {
+  margin-top: auto;
+  border-top: 1px solid #d9d9d9;
+  background: #f8fafc;
+}
+
+.inner {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+  padding-block: 2rem;
+  color: #4b5563;
+}

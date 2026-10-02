@@ -1,0 +1,74 @@
+.hero {
+    padding: 6rem 0;
+    background:
+        linear-gradient(
+            135deg,
+            #808284,
+            #627f9f
+        );
+}
+
+.container {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+}
+
+.content h1 {
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #475467;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 1rem;
+
+    color: #005ea6;
+
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.primaryButton {
+    background: #005ea6;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.secondaryButton {
+    border: 1px solid #d0d5dd;
+    color: #111827;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.visual {
+    display: grid;
+    gap: 1rem;
+    align-content: center;
+}
+
+.statCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #eaecf0;
+}

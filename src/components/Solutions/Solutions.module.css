@@ -1,0 +1,55 @@
+.section {
+    padding: 6rem 0;
+
+    background: #f8fafc;
+}
+
+.container {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.heading {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(320px, 1fr)
+        );
+
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 2rem;
+
+    background: white;
+
+    border-radius: 12px;
+    border: 1px solid #eaecf0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card p {
+    flex-grow: 1;
+
+    color: #475467;
+    line-height: 1.7;
+}
+
+.link {
+    margin-top: 1rem;
+
+    font-weight: 600;
+
+    color: #005ea6;
+
+    text-decoration: none;
+}

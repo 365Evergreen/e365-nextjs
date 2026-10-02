@@ -1,0 +1,9 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "e365-dev-web": {
+      "appLocation": ".",
+      "outputLocation": "out"
+    }
+  }
+}

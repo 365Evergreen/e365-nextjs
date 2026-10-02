@@ -1,0 +1,84 @@
+.headerContainer {  
+  position: fixed;
+  padding: 0;
+  background-color: var(--header-background);
+  height: 72px;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important; /* 👈 Spreads Logo and Button to polar opposite edges */
+  align-items: center !important;
+  box-sizing: border-box;
+}
+
+/* This targets the element when BOTH classes are applied via CSS Modules */
+.headerContainer.scrolled {
+  background-color: var(--header-background-scrolled);
+  position: fixed;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.inner {
+  min-width: 100%;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: space-between;
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand {
+  color: var(--heading);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.branding {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.siteLogo {
+  width: 50px;
+  height: auto;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation a {
+  color: #374151;
+  text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a:focus-visible {
+  color: #005ea6;
+  text-decoration: underline;
+}
+
+
+@media (max-width: 640px) {
+  .inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-block: 1rem;
+  }
+}
