@@ -4,7 +4,7 @@ import  Header  from "@/components/Header/Header";
 import "./globals.css";
 
 const siteName =
-  process.env.NEXT_PUBLIC_SITE_NAME ?? "Headless WordPress";
+  process.env.NEXT_PUBLIC_SITE_NAME ?? "365 Evergreen";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";

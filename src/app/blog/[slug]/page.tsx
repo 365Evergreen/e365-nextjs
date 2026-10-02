@@ -13,7 +13,7 @@ import {
   sanitiseWordPressHtml,
   stripHtml,
 } from "@/lib/html";
-
+import styles from "./page.module.css";
 interface BlogPostPageProps {
   params: Promise<{
     slug: string;
@@ -66,7 +66,7 @@ export default async function BlogPostPage({
 
   const publishedDate = new Intl.DateTimeFormat("en-AU", {
     day: "numeric",
-    month: "long",
+    month: "numeric",
     year: "numeric",
   }).format(new Date(post.date));
 
@@ -88,7 +88,7 @@ export default async function BlogPostPage({
             alt={featuredImageAlt || title}
             width={1200}
             height={630}
-            className="featured-image"
+            className={styles.featuredImage}
           />
         ) : null}
 
