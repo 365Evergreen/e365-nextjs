@@ -72,23 +72,13 @@ export default async function BlogPostPage({
 
   return (
     <article className={styles.pageSection}>
-      <div className={styles.container}>
-        <header className={styles.pageHeading}>
-          <p>
-            Published {publishedDate}
-            {authorName ? ` by ${authorName}` : ""}
-          </p>
-
-          <h1>{title}</h1>
-        </header>
 
 
-        <div
-          className={styles.prose}
-          dangerouslySetInnerHTML={{
-            __html: safeContent,
-          }}
-        />        {featuredImageUrl ? (
+      <div className={styles.postTitle}>       
+         <h2>{title}</h2>      
+      </div>      
+      <div className={styles.featuredImageWrapper}>
+        {featuredImageUrl ? (
           <Image
             src={featuredImageUrl}
             alt={featuredImageAlt || title}
@@ -97,6 +87,13 @@ export default async function BlogPostPage({
             className={styles.featuredImage}
           />
         ) : null}
+      </div>
+      <div className={styles.container}
+        dangerouslySetInnerHTML={{
+          __html: safeContent,
+        }}
+
+      >
 
       </div>
     </article>

@@ -3,7 +3,7 @@
   --background: #f9f8f8;
   --foreground: #101828;
   --muted: #475467;
-  --accent: #005ea6;
+  --accent: #969697;
   --border: #d9d9d9;
   --surface: #f8fafc;
   --text: #1f1f1f;
@@ -11,6 +11,19 @@
   --header-background: transparent;
   --header-background-scrolled: #ffffff;
   --header-text: #101828;
+  --social-background: #f8fafc;
+}
+
+header {
+  background-color: var(--header-background);
+  height: 72px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: var(--header-text);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 * {

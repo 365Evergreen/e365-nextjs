@@ -7,18 +7,21 @@
  }
 
  .pageSection {
-  padding-block: clamp(2.5rem, 6vw, 5rem);
-  display: flex;
-  flex-direction: column; 
-  gap: 2rem;
+    margin-top: 72px;
+    padding-top: var(--header-height);
+    display: flex;
+    flex-direction: column; 
+  
 }
 
 .container {
-  width: min(1120px, calc(100% - 2rem));
-  margin-inline: auto;
+  width: 100%;
+    background-color: var(--accent);
+
 }
 
 .pageHeading {
+  padding: 0 4rem;
   max-width: 48rem;
   margin-bottom: 2rem;
 }
@@ -27,6 +30,7 @@
   margin: 0 0 0.75rem;
   font-size: clamp(2rem, 6vw, 3.75rem);
   line-height: 1.1;
+  font-weight: 450;
 }
 
 .pageHeading p {
@@ -39,8 +43,8 @@
 .postGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .prose {
