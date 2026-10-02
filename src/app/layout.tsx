@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteName}`,
   },
   description:
-    "A statically generated Next.js website powered by WordPress.",
+    "A statically generated Next.js website powered by your mum.",
 };
 
 export default function RootLayout({

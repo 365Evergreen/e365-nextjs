@@ -71,9 +71,9 @@ export default async function BlogPostPage({
   }).format(new Date(post.date));
 
   return (
-    <article className="page-section">
-      <div className="container">
-        <header className="page-heading">
+    <article className={styles.pageSection}>
+      <div className={styles.container}>
+        <header className={styles.pageHeading}>
           <p>
             Published {publishedDate}
             {authorName ? ` by ${authorName}` : ""}
@@ -82,22 +82,22 @@ export default async function BlogPostPage({
           <h1>{title}</h1>
         </header>
 
-        {featuredImageUrl ? (
+
+        <div
+          className={styles.prose}
+          dangerouslySetInnerHTML={{
+            __html: safeContent,
+          }}
+        />        {featuredImageUrl ? (
           <Image
             src={featuredImageUrl}
             alt={featuredImageAlt || title}
-            width={1200}
-            height={630}
+            width={100}
+            height={60}
             className={styles.featuredImage}
           />
         ) : null}
 
-        <div
-          className="prose"
-          dangerouslySetInnerHTML={{
-            __html: safeContent,
-          }}
-        />
       </div>
     </article>
   );

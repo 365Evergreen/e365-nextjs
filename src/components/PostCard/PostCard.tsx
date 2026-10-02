@@ -19,10 +19,13 @@ export function PostCard({ post }: PostCardProps) {
     const excerpt = stripHtml(post.excerpt.rendered);
 
     return (
-        <article className={styles.card}>
+        <article className={styles.card}>  <h2 className={styles.title}><Link href={`/blog/${post.slug}/`}>
+                    {title}
+                </Link>
+                </h2>
             {imageUrl ? (
                 <div className={styles.imageWrapper}>
-                    <Image src={imageUrl} alt={imageAlt} fill />
+                    <Image className={styles.image} src={imageUrl} alt={imageAlt} width={100} height={100} />
                 </div>
             ) : null}
 
@@ -30,15 +33,12 @@ export function PostCard({ post }: PostCardProps) {
                 <p className={styles.date}>
                     {new Intl.DateTimeFormat("en-AU", {
                         day: "numeric",
-                        month: "long",
+                        month: "numeric",
                         year: "numeric",
                     }).format(new Date(post.date))}
                 </p>
 
-                <h2 className={styles.title}><Link href={`/blog/${post.slug}/`}>
-                    {title}
-                </Link>
-                </h2>
+              
 
                 {excerpt ? <p className={styles.excerpt}>{excerpt}</p> : null}
 

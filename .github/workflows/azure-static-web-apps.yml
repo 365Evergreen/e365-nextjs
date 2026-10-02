@@ -36,7 +36,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Keeps compatibility with the latest Next.js versions
+          node-version: '24' # Keeps compatibility with the latest Next.js versions
           cache: 'npm'
 
       # Step 3: Install project dependencies

@@ -8,6 +8,9 @@
 
  .pageSection {
   padding-block: clamp(2.5rem, 6vw, 5rem);
+  display: flex;
+  flex-direction: column; 
+  gap: 2rem;
 }
 
 .container {
@@ -31,6 +34,13 @@
   color: var(--muted);
   font-size: 1.125rem;
   line-height: 1.7;
+}
+
+.postGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .prose {
